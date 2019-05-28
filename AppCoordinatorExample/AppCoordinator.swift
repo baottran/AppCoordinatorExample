@@ -76,15 +76,4 @@ extension AppCoordinator: LoginViewControllerDelegate {
     }
 }
 
-protocol Coordinator {
-    func start()
-}
-
-class JobsCoordinator: Coordinator {
-    
-    func start(){
-        
-    }
-}
-
 

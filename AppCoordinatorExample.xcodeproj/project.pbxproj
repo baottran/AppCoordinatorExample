@@ -16,6 +16,8 @@
 		CB79FC602293C7BA00F7816A /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB79FC5F2293C7BA00F7816A /* TabBarViewController.swift */; };
 		CBC1AE9E2296022A002779DA /* PersistanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC1AE9D2296022A002779DA /* PersistanceManager.swift */; };
 		CBC1AEA02299E9AC002779DA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC1AE9F2299E9AC002779DA /* LoginViewController.swift */; };
+		CBC1AEA2229DABB8002779DA /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC1AEA1229DABB8002779DA /* Coordinator.swift */; };
+		CBC1AEA5229DAC0B002779DA /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC1AEA4229DAC0B002779DA /* NavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		CB79FC5F2293C7BA00F7816A /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		CBC1AE9D2296022A002779DA /* PersistanceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistanceManager.swift; sourceTree = "<group>"; };
 		CBC1AE9F2299E9AC002779DA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		CBC1AEA1229DABB8002779DA /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		CBC1AEA4229DAC0B002779DA /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,7 @@
 		CB79FC4A2293C68700F7816A /* AppCoordinatorExample */ = {
 			isa = PBXGroup;
 			children = (
+				CBC1AEA3229DABE7002779DA /* Handshake */,
 				CB79FC4B2293C68700F7816A /* AppDelegate.swift */,
 				CB79FC4D2293C68700F7816A /* ViewController.swift */,
 				CB79FC4F2293C68700F7816A /* Main.storyboard */,
@@ -74,6 +79,15 @@
 				CBC1AE9F2299E9AC002779DA /* LoginViewController.swift */,
 			);
 			path = AppCoordinatorExample;
+			sourceTree = "<group>";
+		};
+		CBC1AEA3229DABE7002779DA /* Handshake */ = {
+			isa = PBXGroup;
+			children = (
+				CBC1AEA1229DABB8002779DA /* Coordinator.swift */,
+				CBC1AEA4229DAC0B002779DA /* NavigationController.swift */,
+			);
+			path = Handshake;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,11 +162,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBC1AEA02299E9AC002779DA /* LoginViewController.swift in Sources */,
+				CBC1AEA5229DAC0B002779DA /* NavigationController.swift in Sources */,
 				CBC1AE9E2296022A002779DA /* PersistanceManager.swift in Sources */,
 				CB79FC602293C7BA00F7816A /* TabBarViewController.swift in Sources */,
 				CB79FC5E2293C6CF00F7816A /* AppCoordinator.swift in Sources */,
 				CB79FC4E2293C68700F7816A /* ViewController.swift in Sources */,
 				CB79FC4C2293C68700F7816A /* AppDelegate.swift in Sources */,
+				CBC1AEA2229DABB8002779DA /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
