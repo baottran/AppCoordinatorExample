@@ -34,30 +34,30 @@ class AppCoordinator {
     
     func setupMain() -> UITabBarController {
         
-//        let tabBarVC = UITabBarController()
-//
-//        let yellowVC = UIViewController()
-//        let blueVC = UIViewController()
-//        let grayVC = UIViewController()
-//
-//        var controllers: [UINavigationController] = [yellowVC, blueVC, grayVC].map { vc in
-//            let nav = UINavigationController(rootViewController: vc)
-//            return nav
-//        }
-//
-//        yellowVC.view.backgroundColor = .yellow
-//        yellowVC.tabBarItem = UITabBarItem(title: "yellow", image: nil, selectedImage: nil)
-//
-//        blueVC.view.backgroundColor = .blue
-//        blueVC.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 1)
-//
-//        grayVC.view.backgroundColor = .gray
-//        grayVC.tabBarItem = UITabBarItem(tabBarSystemItem: .history, tag: 2)
-//
-//
-//        tabBarVC.viewControllers = controllers
-//
-//        self.currentTabBarVC = tabBarVC
+        let tabBarVC = UITabBarController()
+
+        let yellowVC = UIViewController()
+        let blueVC = UIViewController()
+        let grayVC = UIViewController()
+
+        var controllers: [UINavigationController] = [yellowVC, blueVC, grayVC].map { vc in
+            let nav = UINavigationController(rootViewController: vc)
+            return nav
+        }
+
+        yellowVC.view.backgroundColor = .yellow
+        yellowVC.tabBarItem = UITabBarItem(title: "yellow", image: nil, selectedImage: nil)
+
+        blueVC.view.backgroundColor = .blue
+        blueVC.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 1)
+
+        grayVC.view.backgroundColor = .gray
+        grayVC.tabBarItem = UITabBarItem(tabBarSystemItem: .history, tag: 2)
+
+
+        tabBarVC.viewControllers = controllers
+
+        self.currentTabBarVC = tabBarVC
         
         return tabBarVC
     }
