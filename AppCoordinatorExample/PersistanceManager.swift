@@ -15,10 +15,14 @@ class PersistanceManager {
     static var shared = PersistanceManager()
     
     static func userIsLoggedIn() -> Bool {
-        return UserDefaults.standard.bool(forKey: kLoggedIn) == true
+        return UserDefaults.standard.bool(forKey: kLoggedIn)
     }
     
     static func logUserIn(){
         UserDefaults.standard.set(true, forKey: kLoggedIn)
+    }
+    
+    static func clearUser(){
+        UserDefaults.standard.removeObject(forKey: kLoggedIn)
     }
 }

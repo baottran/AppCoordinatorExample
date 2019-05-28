@@ -18,6 +18,8 @@
 		CBC1AEA02299E9AC002779DA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC1AE9F2299E9AC002779DA /* LoginViewController.swift */; };
 		CBC1AEA2229DABB8002779DA /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC1AEA1229DABB8002779DA /* Coordinator.swift */; };
 		CBC1AEA5229DAC0B002779DA /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC1AEA4229DAC0B002779DA /* NavigationController.swift */; };
+		CBC1AEA7229DCF19002779DA /* SignInCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC1AEA6229DCF19002779DA /* SignInCoordinator.swift */; };
+		CBC1AEA9229DDC36002779DA /* TabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC1AEA8229DDC36002779DA /* TabCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		CBC1AE9F2299E9AC002779DA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CBC1AEA1229DABB8002779DA /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		CBC1AEA4229DAC0B002779DA /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		CBC1AEA6229DCF19002779DA /* SignInCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInCoordinator.swift; sourceTree = "<group>"; };
+		CBC1AEA8229DDC36002779DA /* TabCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,8 @@
 				CB79FC5F2293C7BA00F7816A /* TabBarViewController.swift */,
 				CBC1AE9D2296022A002779DA /* PersistanceManager.swift */,
 				CBC1AE9F2299E9AC002779DA /* LoginViewController.swift */,
+				CBC1AEA6229DCF19002779DA /* SignInCoordinator.swift */,
+				CBC1AEA8229DDC36002779DA /* TabCoordinator.swift */,
 			);
 			path = AppCoordinatorExample;
 			sourceTree = "<group>";
@@ -161,10 +167,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBC1AEA9229DDC36002779DA /* TabCoordinator.swift in Sources */,
 				CBC1AEA02299E9AC002779DA /* LoginViewController.swift in Sources */,
 				CBC1AEA5229DAC0B002779DA /* NavigationController.swift in Sources */,
 				CBC1AE9E2296022A002779DA /* PersistanceManager.swift in Sources */,
 				CB79FC602293C7BA00F7816A /* TabBarViewController.swift in Sources */,
+				CBC1AEA7229DCF19002779DA /* SignInCoordinator.swift in Sources */,
 				CB79FC5E2293C6CF00F7816A /* AppCoordinator.swift in Sources */,
 				CB79FC4E2293C68700F7816A /* ViewController.swift in Sources */,
 				CB79FC4C2293C68700F7816A /* AppDelegate.swift in Sources */,

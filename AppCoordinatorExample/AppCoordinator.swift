@@ -9,71 +9,43 @@
 import Foundation
 import UIKit
 
-class AppCoordinator {
+class AppCoordinator: Coordinator {
     
-    var currentTabBarVC: UITabBarController?
-    var currentLoginVC: LoginViewController?
+    var tabBarCoordinator: TabCoordinator?
+    var signInCoordinator: SignInCoordinator?
     
-    init(){
-        
-    }
-    
-    func start() -> UIViewController {
+    override func start() {
         if PersistanceManager.userIsLoggedIn() {
-            return setupMain()
+            setupTabCoordinator()
         } else {
-            return setupLoginVC()
+            setupSignInCoordinator()
         }
     }
+    
+    func setupTabCoordinator(){
+        let tabCoordinator = TabCoordinator(navigationController: navigationController, parent: nil)
+        tabCoordinator.start()
+        setup(rootViewController: tabCoordinator.tabBarVC)
+    }
+    
+    func setupSignInCoordinator(){
+        let loginCoordinator = SignInCoordinator(navigationController: navigationController, parent: nil)
+        loginCoordinator.delegate = self
+        loginCoordinator.start()
+        signInCoordinator = loginCoordinator
+    }
+    
+    // Helper
     
     func setup(rootViewController: UIViewController){
         let window = UIApplication.shared.keyWindow
         window!.rootViewController = rootViewController
         window!.makeKeyAndVisible()
     }
-    
-    func setupMain() -> UITabBarController {
-        
-        let tabBarVC = UITabBarController()
-
-        let yellowVC = UIViewController()
-        let blueVC = UIViewController()
-        let grayVC = UIViewController()
-
-        var controllers: [UINavigationController] = [yellowVC, blueVC, grayVC].map { vc in
-            let nav = UINavigationController(rootViewController: vc)
-            return nav
-        }
-
-        yellowVC.view.backgroundColor = .yellow
-        yellowVC.tabBarItem = UITabBarItem(title: "yellow", image: nil, selectedImage: nil)
-
-        blueVC.view.backgroundColor = .blue
-        blueVC.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 1)
-
-        grayVC.view.backgroundColor = .gray
-        grayVC.tabBarItem = UITabBarItem(tabBarSystemItem: .history, tag: 2)
-
-
-        tabBarVC.viewControllers = controllers
-
-        self.currentTabBarVC = tabBarVC
-        
-        return tabBarVC
-    }
-    
-    func setupLoginVC() -> UIViewController {
-        let loginVC = LoginViewController()
-        loginVC.delegate = self
-        return loginVC
-    }
 }
 
-extension AppCoordinator: LoginViewControllerDelegate {
-    func login() {
-        let tabVC = setupMain()
-        setup(rootViewController: tabVC)
+extension AppCoordinator: SignInCoordinatorDelegate {
+    func didFinish(coordinator: Coordinator) {
+       start()
     }
 }
-
-

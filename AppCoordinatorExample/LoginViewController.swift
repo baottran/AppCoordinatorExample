@@ -8,14 +8,14 @@
 
 import UIKit
 
-protocol LoginViewControllerDelegate: class {
+protocol LogInViewControllerDelegate: class {
     func login()
 }
 
-class LoginViewController: UIViewController {
+class LogInViewController: UIViewController {
     
     
-    weak var delegate: LoginViewControllerDelegate?
+    weak var delegate: LogInViewControllerDelegate?
     
 
     override func viewDidLoad() {
@@ -39,16 +39,4 @@ class LoginViewController: UIViewController {
     @objc func login(){
         delegate?.login()
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
