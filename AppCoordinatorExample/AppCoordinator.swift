@@ -67,12 +67,6 @@ class AppCoordinator: Coordinator {
         window.rootViewController = tabBarVC
         window.makeKeyAndVisible()
     }
-    
-    // Helper
-    
-    func setup(rootViewController: UIViewController){
-        
-    }
 }
 
 extension AppCoordinator: SignInCoordinatorDelegate {
