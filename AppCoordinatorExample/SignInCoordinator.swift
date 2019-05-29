@@ -9,7 +9,7 @@
 import Foundation
 
 protocol SignInCoordinatorDelegate: CoordinatorDelegate {
-    
+    func userAuthenticated()
 }
 
 class SignInCoordinator: Coordinator {
@@ -27,5 +27,6 @@ extension SignInCoordinator: LogInViewControllerDelegate {
     func login() {
         PersistanceManager.logUserIn()
         delegate?.didFinish(coordinator: self)
+        delegate?.userAuthenticated()
     }
 }
