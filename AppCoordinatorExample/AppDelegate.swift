@@ -19,16 +19,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         PersistanceManager.clearUser()
         
-        let nav = NavigationController(rootViewController: UIViewController())
-        nav.isNavigationBarHidden = true
-        
         let frame = UIScreen.main.bounds
-        window = UIWindow(frame: frame)
-     
-        window!.rootViewController = nav
-        window!.makeKeyAndVisible()
+        let window = UIWindow(frame: frame)
+        self.window = window
     
-        coordinator = AppCoordinator(navigationController: nav, parent: nil)
+        coordinator = AppCoordinator(window: window)
         coordinator?.start()
         
         return true

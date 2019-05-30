@@ -9,27 +9,6 @@
 import Foundation
 import UIKit
 
-class TabCoordinator: Coordinator {
-
-    var tabBarVC: UITabBarController!
-    
-    override func start() {
-        
-        let tabBarVC = UITabBarController()
-        
-        let contactsCoordinator = ContactCoordinator(navigationController: NavigationController(), parent: self)
-        let bookmarkCoordinator = BookmarkCoordinator(navigationController: NavigationController(), parent: self)
-        let historyCoordinator = HistoryCoordinator(navigationController: NavigationController(), parent: self)
-        
-        childCoordinators = [contactsCoordinator, bookmarkCoordinator, historyCoordinator]
-        
-        _ = childCoordinators.map { $0.start() }
-        tabBarVC.viewControllers = childCoordinators.map { $0.viewController }
-        self.tabBarVC = tabBarVC
-    }
-}
-
-
 class ContactCoordinator: Coordinator {
     
     override func start(){
